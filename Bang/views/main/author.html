@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>俞少倩的自我介绍</title>
+	<link href="/public/fontAwesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<style>
+		/*复位*/
+		*{padding:0;margin:0;}
+		ul{list-style:none;}
+		
+		html,body{width:100%;height:100%;font-family: '宋体';font-size: 22px;font-weight: bold;}
+		#main{
+			width:100%;height:100%;
+			position:relative;
+			overflow:hidden;
+		}
+		#main>a,#main>input{
+			width:20%;
+			height:50px;
+			line-height:50px;
+			position:absolute;
+			bottom:0;
+		}
+		#main>a{
+			font-size:25px;
+			text-decoration:none;
+			color:white;text-align:center;
+			background-color:#a2dbf5;
+			z-index:99;
+			font-family: '宋体';font-weight: bold;
+		}
+		#main>input{z-index:100;opacity:0;cursor:pointer;}
+		#main>.menu1{left:0%;}
+		#main>.menu2{left:20%;}
+		#main>.menu3{left:40%;}
+		#main>.menu4{left:60%;}
+		#main>.menu5{left:80%;}
+		#main>input:hover+a{background-color:#62a6e0;}
+		#main>input:checked+a{background-color:#0071d1;}
+		#main>input:checked+a:before{
+			content:'';
+			display:block;
+			width:0;height:0;line-height:0;
+			border-style:dotted dashed solid dashed;
+			border-color:transparent;
+			border-bottom-color:#0071d1;
+			border-width:20px;
+			position:absolute;
+			left:50%;bottom:100%;
+			transform:translateX(-50%);
+		}
+		#main>input.menu1:checked~.scroll{
+			transform:translateY(0%);
+		}
+		#main>input.menu2:checked~.scroll{
+			transform:translateY(-20%);
+		}
+		#main>input.menu3:checked~.scroll{
+			transform:translateY(-40%);
+		}
+		#main>input.menu4:checked~.scroll{
+			transform:translateY(-60%);
+		}
+		#main>input.menu5:checked~.scroll{
+			transform:translateY(-80%);
+		}
+		/*scroll部分*/
+		#main>.scroll{
+			width:100%;height:500%;
+			transition:all 0.6s linear;
+		}
+		#main>.scroll>.part{
+			width:100%;height:20%;position:relative;
+		}
+		#main>.scroll>.part:before{
+			content:'';
+			position:absolute;top:0;left:50%;
+			border-style:solid dashed dotted dashed;
+			border-width:120px;
+			border-color:transparent;
+			width:0;height:0;line-height:0;
+			transform:translateX(-50%);
+		}
+		#main>.scroll>.part:nth-child(odd):before{
+			border-top-color:#a2dbf5;
+		}
+		#main>.scroll>.part:nth-child(even):before{
+			border-top-color:white;
+		}
+		#main>.scroll>.part:after{
+			content:attr(data-icon);
+			position:absolute;top:20px;left:50%;
+			transform:translateX(-50%);
+			font-size:50px;
+		}
+		#main>.scroll>.part:nth-child(odd):after{
+			color:white;
+		}
+		#main>.scroll>.part:nth-child(even):after{
+			color:#a2dbf5;
+		}
+		#main>.scroll>.part:nth-child(even){
+			background-color:#a2dbf5;
+		}
+		.centerone{
+			width: 900px;height: 400px;
+			position: absolute;
+			top: 25%;left: 50%;margin-left: -450px;
+			line-height: 30px;text-align: center;
+		}
+		.center{
+			width: 900px;height: 400px;
+			position: absolute;
+			top: 25%;left: 50%;margin-left: -450px;
+			line-height: 40px;
+		}
+		.white{background-color: #fff;}
+		.red{background-color: #a2dbf5;}
+		p{font-size: 20px;}
+	</style>
+</head>
+<body>
+	<div id='main'>
+		<input type="radio" class='menu1' name='menu' checked>
+		<a href="#" class='menu1'>作者长这样</a>
+
+		<input type="radio" class='menu2' name='menu'>
+		<a href="#" class='menu2'>在校表现</a>
+
+		<input type="radio" class='menu3' name='menu'>
+		<a href="#" class='menu3'>获奖经历</a>
+
+		<input type="radio" class='menu4' name='menu'>
+		<a href="#" class='menu4'>项目经验</a>
+
+		<input type="radio" class='menu5' name='menu'>
+		<a href="#" class='menu5'>人格魅力</a>
+
+		<div class='scroll'>
+			<div class='part part1' data-icon='E'>
+				<div class="centerone red">
+					<img src="../../public/images/author.jpg" alt="">
+					<p>姓名：俞少倩</p>
+					<p>性别：女</p>
+					<p>年龄：21岁</p>
+					<p>民族：汉族</p>
+					<p>学历：本科</p>
+				</div>
+			</div>
+			<div class='part part2' data-icon='B'>
+				<div class="center white">
+					<p>2014.09-至今：班级团支书</p>
+					<p>2016.09-至今：新生班级辅导员</p>
+					<p>2015.03-2017-06：院半月工作室成员</p>
+					<p>2014.09-2016.06：院团委组织部副部长</p>
+					<p>2014.09-2017.06：院田径队跳跃组成员</p>
+					<p>2014.09-2015.09：院青年志愿者协会志愿者</p>
+					<p>2014.09-2015.09：校街舞协会成员</p>
+				</div>
+			</div>
+			<div class='part part3' data-icon='A'>
+				<div class="center red">
+					<p>2014.12 专业三等奖学金</p>
+					<p>2015.06 专业三等奖学金、全省大学生英语竞赛优异奖</p>
+					<p>2015.12 专业三等奖学金、院优秀学生干部</p>
+					<p>2016.06 专业二等奖学金、院优秀副部长、院系“科技月月评”一等奖</p>
+					<p>2016.12 专业一等奖学金、国家助学金、新生班级辅导员聘书</p>
+					<p>2017.06 国家励志奖学金、专业二等奖学金 </p>
+				</div>
+			</div>
+			<div class='part part4' data-icon='N'>
+				<div class="center white">
+					<h3>院‘三检系统’</h3>
+					<p>与同学一起合作开发学院‘三检管理系统’，主要负责运用html、css、JavaScript语言进行页面设计，运用nodejs进行用户的注册登录退出。 
+					</p>
+					<h3>其他</h3>
+					<p>在老师的指导下，进行为期三个月app的开发（掌握vue，React框架）
+					</p>
+					<p>这个可以分享事件的小应用</p>
+				</div>
+			</div>
+			<div class='part part5' data-icon='G'>
+				<div class="center red">
+					<p>1、性格开朗，做事积极认真，善于沟通语言交流及管理领导工作。乐于帮助他人，积极参加各类志愿服务活动；<br>
+					2、关注前端前沿技术，基本功扎实，掌握HTML5、CSS3、JavaScript、ES6等；能应用常见的前端框架并掌握其原理，有组件化的思想，担当且创新；<br>
+					3、有较强的学习能力和适应能力，良好的独立分析解决问题能力和逻辑分析思维；<br>
+					4、良好的团队沟通协作力和服务意识，较强的工作执行力和抗压能力，愿与公司一同发展。
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
